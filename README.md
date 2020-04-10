@@ -1,24 +1,70 @@
-# README
+# simple-api-rails #
+Simple API Rails using Ruby as Programming Language (Rails Framework), PostgreSQL as Database
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Requirements
+Simple API is currently extended with the following requirements. Instructions on how to use them in your own application are linked below.
 
-Things you may want to cover:
+| Requirement | Version    |
+| ----------- | ---------- |
+| Ruby        | >= 2.7.1   |
+| Rails       | >= 6.0.2.2 |
+| PosgtreSQL  | >= 12.0    |
 
-* Ruby version
+### Setup
+* Setup Ruby <https://www.ruby-lang.org/en/>
+* Setup Rails <https://rubyonrails.org/>
+* Setup PostgreSQL <https://www.postgresql.org/>
 
-* System dependencies
+### Installation
+Make sure you the requirements above already install on your system. Or you could easily run with Docker to make your environment clean.
 
-* Configuration
+Clone the project to your directory and install the dependencies.
+```sh
+$ git clone git@github.com:moemoe89/simple-api-rails.git
+$ cd simple-api-rails
+$ bundle install
+```
 
-* Database creation
+Setup your environments.
+```sh
+$ cp .env.example .env
+```
+Change your PostgreSQL credentials depends on your PostgreSQL installed config.
+```sh
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=simple_api
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
 
-* Database initialization
+SECRET_KEY_BASE=xxxxx
+```
 
-* How to run the test suite
+### Migrate
+Setup your migration following by this command.
+```sh
+$ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Seed
+Seed your data following by this command.
+```sh
+$ rails db:seed
+```
 
-* Deployment instructions
+### Run Application
+For run application:
+```sh
+$ rails s
+```
 
-* ...
+Verify the apllication by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:3000
+```
+
+License
+----
+
+MIT

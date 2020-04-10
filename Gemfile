@@ -41,3 +41,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv-rails', groups: [:development, :test]
+
+gem 'jwt'
+
+gem 'bcrypt', '~> 3.1.13'

@@ -1,7 +1,7 @@
 module Api
   module V1
     class UsersController < ApplicationController
-      before_action :authorize_request, except: :create
+      before_action :authorize_request
       before_action :find_user, except: %i[create index]
 
       def index

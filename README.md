@@ -64,6 +64,39 @@ Verify the apllication by navigating to your server address in your preferred br
 127.0.0.1:3000
 ```
 
+### Docker
+Simple API is very easy to install and deploy in a Docker container. Simply use the docker-compose build to build the image.
+
+```sh
+$ docker-compose build
+```
+Once done, run the Docker image by using docker-compose up command.
+
+```sh
+$ docker-compose up -d
+```
+
+Setup the DB migration by using docker-compose exec command.
+```sh
+$ docker-compose exec app rails db:migrate
+```
+
+Setup the DB seed by using docker-compose exec command.
+```sh
+$ docker-compose exec app rails db:seed
+```
+
+Verify the application by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:3000
+```
+
+Stop application could be done with docker-compose stop command.
+```sh
+$ docker-compose stop
+```
+
 License
 ----
 
